@@ -4,6 +4,18 @@
 // a = 2; b = 10 --> max =10
 // a = -9; b = -3 --> max = -3 
 Console.WriteLine("Введите первое число: ");
-string numberA = Console.ReadLine();
+int numberA =Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число: ");
-string numberB = Console.ReadLine();
+int numberB =Convert.ToInt32(Console.ReadLine());
+if(numberA > numberB)
+{
+    Console.WriteLine(numberA);
+}
+else if(numberA < numberB)
+{
+    Console.WriteLine(numberB);
+}
+else
+{
+    Console.WriteLine("Оба числа равны");
+}
