@@ -17,5 +17,4 @@ int reverseLast = number % 10;
       else
       {
         Console.WriteLine($"Введенное число - не палиндром");
-      } 
-    
+      }
