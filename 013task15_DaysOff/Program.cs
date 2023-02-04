@@ -2,20 +2,20 @@
 //обозначающую день недели и проверяет, является ли этот день
 //Выходным.
 Console.WriteLine("Введите цифру дня недели (считая понедельник первым): ");
-string number = Console.ReadLine();
-if (number == "6")
+string? daynumber = Console.ReadLine();
+if (daynumber == "6")
    Console.WriteLine("Выходной день");
-   else if (number == "7")
+   else if (daynumber == "7")
    Console.WriteLine("Выходной день");
-else if (number == "1")
+else if (daynumber == "1")
    Console.WriteLine("Будний день");
-   else if (number == "2")
+   else if (daynumber == "2")
    Console.WriteLine("Будний день");
-   else if (number == "3")
+   else if (daynumber == "3")
    Console.WriteLine("Будний день");
-   else if (number == "4")
+   else if (daynumber == "4")
    Console.WriteLine("Будний день");
-   else if (number == "5")
+   else if (daynumber == "5")
    Console.WriteLine("Будний день");
 else Console.WriteLine("Вы ввели не день недели");
 
