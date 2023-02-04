@@ -10,12 +10,12 @@ int numberFirst = number / 10000 % 10;
 int numberSecond = number / 1000 % 10;
 int reverseBeforeLast = number / 10 % 10;
 int reverseLast = number % 10;
-    if  (number > 99999)(number < 10000);
+    if  ((number > 99999) || (number < 9999))
     {
       Console.WriteLine("Неверный ввод");
     }
 
-    if  (numberFirst == reverseLast && numberSecond == reverseBeforeLast)
+    else if  (numberFirst == reverseLast && numberSecond == reverseBeforeLast)
       {
         Console.WriteLine("Введенное число - палиндром");
       }
