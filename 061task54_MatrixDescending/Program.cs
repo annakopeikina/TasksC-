@@ -17,13 +17,13 @@ int m = Convert.ToInt32(Console.ReadLine());
 
 int[,] RandomMatrix()
 {
-    int[,] matrix = new int[n,m];
+    int[,] matrix = new int[n, m];
     Random rnd = new Random();
-    
+
     for (int i = 0; i < n; i++)
     {
-        for (int j =0; j < m; j++)
-        matrix[i,j]= rnd.Next(1, 10);
+        for (int j = 0; j < m; j++)
+            matrix[i, j] = rnd.Next(1, 10);
     }
     return matrix;
 }
@@ -34,7 +34,7 @@ void PrintMatrix(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write($"{matrix[i,j]} ");
+            Console.Write($"{matrix[i, j]} ");
         }
 
         Console.WriteLine();
@@ -46,12 +46,12 @@ void SortDescending(int[,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int k =0; k < matrix.GetLength(1)-1; k++)
+            for (int k = 0; k < matrix.GetLength(1) - 1; k++)
             {
-                if (matrix[i,k] < matrix[i,k + 1])
+                if (matrix[i, k] < matrix[i, k + 1])
                 {
-                    int temp = matrix[i,k + 1];
-                    matrix[i,k + 1] = matrix[i, k];
+                    int temp = matrix[i, k + 1];
+                    matrix[i, k + 1] = matrix[i, k];
                     matrix[i, k] = temp;
                 }
             }
