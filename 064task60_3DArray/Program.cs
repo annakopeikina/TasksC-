@@ -21,17 +21,17 @@ void CreateArray(int[,,] array3d)
     int[] unique = new int[array3d.GetLength(0) * array3d.GetLength(1) * array3d.GetLength(2)];
     int number;
     Random rnd = new Random();
-    for(int i = 0; i < unique.GetLength(0); i++)
+    for (int i = 0; i < unique.GetLength(0); i++)
     {
-        unique[i] = rnd.Next(10,100);
+        unique[i] = rnd.Next(10, 100);
         number = unique[i];
         if (i >= 1)
         {
-            for (int j = 0; j <i; j++)
+            for (int j = 0; j < i; j++)
             {
                 while (unique[i] == unique[j])
                 {
-                    unique[i] = rnd.Next(10,100);
+                    unique[i] = rnd.Next(10, 100);
                     j = 0;
                     number = unique[i];
                 }
