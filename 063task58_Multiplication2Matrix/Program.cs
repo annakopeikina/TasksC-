@@ -14,7 +14,7 @@ Console.WriteLine("Введите количество столбцов втор
 int t = Convert.ToInt32(Console.ReadLine());
 int[,] firstMatrix = new int[n, mn];
 int[,] secondMatrix = new int[mn, t];
-int[,] multipliedMatrix = new int[n,t];
+int[,] multipliedMatrix = new int[n, t];
 Matrix(firstMatrix);
 Console.WriteLine($"\nпервая матрица: ");
 PrintMatrix(firstMatrix);
@@ -26,7 +26,6 @@ PrintMatrix(secondMatrix);
 MultiplyMatrix(firstMatrix, secondMatrix, multipliedMatrix);
 Console.WriteLine($"\nпроизведение этих матриц: ");
 PrintMatrix(multipliedMatrix);
-
 
 void Matrix(int[,] matrix)
 {
@@ -40,13 +39,13 @@ void Matrix(int[,] matrix)
         }
     }
 }
-void PrintMatrix (int[,] matrix)
+void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            Console.Write(matrix[i,j] + " ");
+            Console.Write(matrix[i, j] + " ");
         }
         Console.WriteLine();
     }
@@ -60,11 +59,10 @@ void MultiplyMatrix(int[,] firstMatrix, int[,] secondMatrix, int[,] multipliedMa
             int sum = 0;
             for (int k = 0; k < firstMatrix.GetLength(1); k++)
             {
-                sum += firstMatrix[i,k] * secondMatrix[k,j];
+                sum += firstMatrix[i, k] * secondMatrix[k, j];
             }
-            multipliedMatrix[i,j] = sum; 
-            
+            multipliedMatrix[i, j] = sum;
+
         }
     }
 }
-
